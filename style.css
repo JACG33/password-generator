@@ -1,0 +1,166 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark light;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+
+.main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.area {
+  display: grid;
+}
+
+.password__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-block: 1.5rem;
+}
+
+.password__wrapper__btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password__input {
+  border-radius: 8px;
+  padding: 0.78rem 1rem;
+  border: 1px solid transparent;
+}
+
+.password__input:is( :focus) {
+  outline: 1px solid #646cff;
+}
+
+.password__input:hover {
+  border-color: #646cff;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #121212;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.btn:hover {
+  border-color: #646cff;
+}
+
+.btn--1 {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.btn--2 {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.copied {
+  background-color: #646cff;
+}
+
+.popover {
+  border: none;
+  border-radius: 8px;
+  font-size: 2rem;
+}
+
+.popover div {
+  padding: 1rem;
+}
+
+.popover::backdrop {
+  background-color: #00000070;
+}
+
+.timerdown {
+  width: 100%;
+  height: 10px;
+  background-color: #646cff;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  filter: drop-shadow(0px 0px 1px #646cff);
+  transition: all 600ms ease-in-out;
+}
+
+.wrapper__conditions {
+  display: grid;
+  gap: .8rem;
+}
+
+.wrapper__condition {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: .25rem .5rem;
+  transition: all 150ms ease-in-out;
+  border: 1px solid transparent;
+  background-color: #121212;
+}
+
+.wrapper__condition:hover {
+  border: 1px solid #646cff;
+}
+
+@media screen and (width>520px) {
+  .area {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (width>1024px) {
+  .area {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #121212;
+    background-color: #fdfdfd;
+  }
+
+  .btn,
+  .wrapper__condition,
+  .password__input {
+    background-color: #ebebeb;
+  }
+}

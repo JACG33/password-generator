@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Generador de contraseñas">
+  <link rel="stylesheet" href="style.css">
+  <title>Generador de Contraseñas</title>
+</head>
+
+<body>
+  <main class="main">
+    <h1>Generador de Contraseñas</h1>
+    <div class="area">
+      <div class="password__wrapper">
+        <input type="text" id="passwordinp" class="password__input">
+        <div class="password__wrapper__btns">
+          <button type="button" class="btn btn--1" id="refresh">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-refresh">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" />
+              <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" />
+            </svg>
+          </button>
+          <button type="button" class="btn btn--2" popovertarget="copied" id="copy">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-copy">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+              <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+            </svg>
+          </button>
+          <div popover id="copied" class="popover">
+            <div>
+              🎉 Contraseña copiada 🎉
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timerdown"></div>
+      <div class="wrapper__conditions">
+        <div class="wrapper__condition">
+          <label for="rageninp">Longitud</label>
+          <span id="logitudspan">12</span>
+          <input type="range" name="" id="rageninp" min="8" max="100" value="12">
+        </div>
+        <div class="wrapper__condition">
+          <label for="lettersupper">A-Z</label>
+          <input type="checkbox" name="" checked id="lettersupper">
+        </div>
+        <div class="wrapper__condition">
+          <label for="letterslower">a-z</label>
+          <input type="checkbox" name="" checked id="letterslower">
+        </div>
+        <div class="wrapper__condition">
+          <label for="numbers">0-9</label>
+          <input type="checkbox" name="" checked id="numbers">
+        </div>
+        <div class="wrapper__condition">
+          <label for="characters">!@#$%^&*</label>
+          <input type="checkbox" name="" checked id="characters">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
