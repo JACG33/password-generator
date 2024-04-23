@@ -138,20 +138,6 @@ body {
   border: 1px solid #646cff;
 }
 
-@media screen and (width>520px) {
-  .area {
-    width: 80%;
-    margin: auto;
-  }
-}
-
-@media screen and (width>1024px) {
-  .area {
-    width: 60%;
-    margin: auto;
-  }
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #121212;
